@@ -3,8 +3,9 @@ By Brandon Woo and Frank Zhu
 
 
 ## Testing if backup server is accessible with `rsync`
-- Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <user>@<ip-address>:<destination>`
+- Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
   <path to ssh key> = the location of the ssh key to your backup server
+  <file(s)> = the name of the file and the 
   <user> = the name of the user of the backup directory
   <ip-address> = the ip-address of the backup server
   <destination> = the location on the backup server you want to save the backup file
