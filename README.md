@@ -44,5 +44,5 @@ By Brandon Woo and Frank Zhu
 ## Moving the scripts and unit files to their correct directory
 - Before starting, make a new directory in the /opt directory to hold the script 
 - The new directory must match the directory specified in the `ExecStart` directive
-- Run the command `sudo mkdir /opt/<directory name>`
+- Run the command `sudo mkdir /opt/<directory name>` where `<directory name>` is the name of the directory you want to specify
 - For us, the command was `sudo mkdir /opt/backup-script`
