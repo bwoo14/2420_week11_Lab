@@ -46,3 +46,5 @@ By Brandon Woo and Frank Zhu
 - The new directory must match the directory specified in the `ExecStart` directive
 - Run the command `sudo mkdir /opt/<directory name>` where `<directory name>` is the name of the directory you want to specify
 - For us, the command was `sudo mkdir /opt/backup-script`
+
+- Run the command `sudo cp backup-script /opt/backup-script` to move the script file into the newly created directory
