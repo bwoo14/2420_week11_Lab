@@ -10,14 +10,15 @@ By Brandon Woo and Frank Zhu
   <br>\<ip-address\> = the ip-address of the backup server
   <br>\<destination\> = the location on the backup server you want to save the backup file
   ![](images/test_rsync.png)
-<br>1. Run the command `vim backup-script` in your home directory
-  <br>write shebang at the top then paste in rsync command that you ran it should look like this
-  ![](images/trsync.png)
-  <br>- save and exit out of file and then run `chmod u+x backup-script`
-  <br>Remove the copied directory from your backup server
-  <br>Run your backup script with `./backup-script`
-  ![](images/rsyscrt.png)
-  <br>2. Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
-  ![](images/confsspng.png)
-  <br>3. The new script should look like this
-  ![](images/newscr.png)
+- Run the command `vim backup-script` in your home directory
+- Write shebang at the top then paste in rsync command that you ran it should look like this
+![](images/trsync.png)
+- Save and exit out of file. Run `chmod u+x backup-script`
+- Delete the newly copied directory from your backup server so that you can test to see if you're script works
+- Run your backup script with `./backup-script`
+![](images/rsyscrt.png)
+## Making the backup-script
+- Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
+![](images/confsspng.png)
+- The new script should look like this
+![](images/newscr.png)
