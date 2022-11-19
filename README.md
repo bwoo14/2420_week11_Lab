@@ -28,3 +28,8 @@ By Brandon Woo and Frank Zhu
 - Run the command `vim backup-script.service`
 - Edit the file so it has the following content:
 ![](images/servicefile.png)
+
+## Writing the Timer File
+- Run the command `vim `
+- Edit the file so it has the following content:
+![](images/timerfile.png)
