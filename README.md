@@ -12,7 +12,7 @@ By Brandon Woo and Frank Zhu
   ![](images/test_rsync.png)
   <br>write shebang at the top then paste in rsync command that you ran it should look like this
   ![](images/trsync.png)
-  <br>- save and exit out of file and then run `chmod u+x backup-script`
+  <br> - save and exit out of file and then run `chmod u+x backup-script`
   
 1. Run the command `vim backup-script` in your home directory
 
