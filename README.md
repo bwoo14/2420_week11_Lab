@@ -17,6 +17,6 @@ By Brandon Woo and Frank Zhu
   <br>Remove the copied directory from your backup server
   <br>Run your backup script with `./backup-script`
   ![](images/rsyscrt.png)
-  
+  <br>2. Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
 
 
