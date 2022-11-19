@@ -18,5 +18,6 @@ By Brandon Woo and Frank Zhu
   <br>Run your backup script with `./backup-script`
   ![](images/rsyscrt.png)
   <br>2. Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
-
-
+  ![](images/confsspng.png)
+  <br>3. The new script should look like this
+  ![](images/newscr.png)
