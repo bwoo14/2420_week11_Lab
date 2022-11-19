@@ -42,3 +42,5 @@ By Brandon Woo and Frank Zhu
 - Can change `America/Vancouver` to the desired timezone
 
 ## Moving the scripts and unit files to their correct directory
+- Before starting, make a new directory in the /opt directory to hold the script 
+- The new directory must match the directory specified in the `ExecStart` directive
