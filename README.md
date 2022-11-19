@@ -36,7 +36,9 @@ By Brandon Woo and Frank Zhu
 - `RandomizedDelaySec=5m` the `5m` value can be changed to what the user requires. 
 - This value will allow the script to randomize the start time of each server that requires the backup from 0 seconds to the value required by the user.
 - `RandomizedDelaySec` will change the value given into seconds.
+- Save and exit the file
 
-## Ensure your timezone is set to the correct timezone
 - Use the command `sudo timedatectl set-timezone America/Vancouver`
 - Can change `America/Vancouver` to the desired timezone
+
+## Moving the scripts and unit files to their correct directory
