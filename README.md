@@ -1,6 +1,9 @@
 # 2420_week11_Lab: Backup Service and Weather Service
 By Brandon Woo and Frank Zhu
 
+## Prerequisites
+- root privleges
+- 2 Ubuntu Servers
 
 ## Testing if backup server is accessible with `rsync`
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
