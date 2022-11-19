@@ -22,3 +22,6 @@ By Brandon Woo and Frank Zhu
 ![](images/confsspng.png)
 - The new script should look like this
 ![](images/newscr.png)
+
+
+## Writing the Service File
