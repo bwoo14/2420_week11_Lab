@@ -25,4 +25,6 @@ By Brandon Woo and Frank Zhu
 
 
 ## Writing the Service File
+- Run the command `vim backup-script.service`
+- Edit the file so it has the following content:
 ![](images/servicefile.png)
