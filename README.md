@@ -9,6 +9,7 @@ By Brandon Woo and Frank Zhu
   <br><user> = the name of the user of the backup directory
   <br><ip-address> = the ip-address of the backup server
   <br><destination> = the location on the backup server you want to save the backup file
+  ![](images/test-rsync.png)
 
 1. Run the command `vim backup-script` in your home directory
 
