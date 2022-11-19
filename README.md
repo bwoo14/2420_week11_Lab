@@ -46,9 +46,15 @@ By Brandon Woo and Frank Zhu
 - The new directory must match the directory specified in the `ExecStart` directive
 - Run the command `sudo mkdir /opt/<directory name>` where `<directory name>` is the name of the directory you want to specify
 - For us, the command was `sudo mkdir /opt/backup-script`
-
+- 
 - Run the command `sudo cp backup-script /opt/backup-script` to move the script file into the newly created directory
 - Run the command `sudo cp backup-script.* /etc/systemd/system/` to move both service files to the `/etc/systemd/system/` directory
-- Reload the daemon by using the command `sudo systemctl daemon-reload`
 
+# Enabling the 
+- Reload the daemon by using the command `sudo systemctl daemon-reload`
+- Start the service using the command `sudo systemctl start backup-script.service`
+- enable both the service file and the timer file using `sudo systemctl enable --now backup-script` and `sudo systemctl enable --now backup-script.timer`
+- The service is now active, you can check that the timer is active using `sudo systemctl list-timers`
+- As you can see from the screenshot the service is now scheduled to run (bottom line)
+![](images/timerlist.png)
 
