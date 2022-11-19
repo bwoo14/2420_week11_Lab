@@ -49,3 +49,6 @@ By Brandon Woo and Frank Zhu
 
 - Run the command `sudo cp backup-script /opt/backup-script` to move the script file into the newly created directory
 - Run the command `sudo cp backup-script.* /etc/systemd/system/` to move both service files to the `/etc/systemd/system/` directory
+- Reload the daemon by using the command `sudo systemctl daemon-reload`
+
+
