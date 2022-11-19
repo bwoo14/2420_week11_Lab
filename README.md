@@ -15,7 +15,7 @@ By Brandon Woo and Frank Zhu
 ![](images/trsync.png)
 - Save and exit out of file. Run `chmod u+x backup-script`
 - Delete the newly copied directory from your backup server so that you can test to see if you're script works
-- Run your backup script with `./backup-script`
+- Run your backup script with `./backup-script` <br>
 ![](images/rsyscrt.png)
 ## Making the backup-script
 - Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
