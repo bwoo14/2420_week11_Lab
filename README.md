@@ -10,7 +10,7 @@ By Brandon Woo and Frank Zhu
   <br>\<ip-address\> = the ip-address of the backup server
   <br>\<destination\> = the location on the backup server you want to save the backup file
   ![](images/test_rsync.png)
-  write shebang at the top then paste in rsync command that you ran it should look like this
+  <br>\write shebang at the top then paste in rsync command that you ran it should look like this
   ![](images/trsync.png)
   
 1. Run the command `vim backup-script` in your home directory
