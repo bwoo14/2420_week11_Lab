@@ -30,6 +30,6 @@ By Brandon Woo and Frank Zhu
 ![](images/servicefile.png)
 
 ## Writing the Timer File
-- Run the command `vim `
+- Run the command `vim backup-script.timer`
 - Edit the file so it has the following content:
 ![](images/timerfile.png)
