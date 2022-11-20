@@ -18,7 +18,7 @@ By Brandon Woo and Frank Zhu
   <br>\<user\> = the user on the backup server you wish to ssh into
   <br>\<ip-address\> = the ip-address of the backup server
   <br>\<destination\> = the location on the backup server you want to save the backup file to
-  ![](images/test_rsync.png)
+  ![](images/rsync_command.png)
 - Running this command checks to see if the backup server is accessible using rsync. 
 - Run the command `vim backup-script` in your home directory
 - Write shebang at the top then paste in rsync command that you ran it should look like this
@@ -68,4 +68,6 @@ By Brandon Woo and Frank Zhu
 - The service is now active, you can check that the timer is active using `sudo systemctl list-timers`
 - As you can see from the screenshot the service is now scheduled to run (bottom line)
 ![](images/timerlist.png)
+
+![](images/test_rsync.png)
 
