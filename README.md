@@ -12,7 +12,8 @@ By Brandon Woo and Frank Zhu
 ## Installation
 
 ### Cloning the Repository
-1. Using a Linux Machine, clone this repository using `git clone`
+1. Using a Linux Machine, clone this repository using `git clone https://github.com/bwoo14/2420_week11_Lab.git`
+
 
 ## Tutorial to Create the Backup Script
 
