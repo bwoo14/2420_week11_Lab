@@ -39,6 +39,8 @@ By Brandon Woo and Frank Zhu
 - Run the command `vim backup-script.service`
 - Edit the file so it has the following content:
 ![](images/servicefile.png)
+  - The Description should contain a short description of what the script will do
+  - The `ExecStart` indicates the script will run on startup
 
 ### Writing the Timer File
 - Run the command `vim backup-script.timer`
@@ -48,7 +50,6 @@ By Brandon Woo and Frank Zhu
 - This value will allow the script to randomize the start time of each server that requires the backup from 0 seconds to the value required by the user.
 - `RandomizedDelaySec` will change the value given into seconds.
 - Save and exit the file
-
 - Use the command `sudo timedatectl set-timezone America/Vancouver`
 - Can change `America/Vancouver` to the desired timezone
 
