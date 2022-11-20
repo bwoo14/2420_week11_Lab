@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to start the servcie file every Friday at 01:00 (staggered so service don't all start at same time)
+
+[Timer]
+OnCalendar=Fri *-*-* 01:00
+RandomizedDelaySec=5m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

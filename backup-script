@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#: Title      : Backup files to backup server
+#: Date       : Nov 18th, 2022
+#: Authors    : Brandon Woo and Frank Zhu
+#: Version    : 1.0
+#: Description: backsup specified files to a specified location using ssh and rsync
+#: Options    : none
+
+
+
+# Sources the backup_script.conf folder to get the configuration variables
+source /etc/backup_script.conf
+
+
+# Run the rysnc command
+rsync -aPv -e "${SSH}" ${TARGET} ${SERVER}:${DESTINATION}

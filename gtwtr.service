@@ -1,0 +1,9 @@
+[Unit]
+Description=use curl and wttr to get the weather everyday at )5:00
+
+[Service]
+Type=oneshot
+ExecStart=/opt/gtwtr/gtwtr
+
+[Intsall]
+WantedBy=multi-user.target
