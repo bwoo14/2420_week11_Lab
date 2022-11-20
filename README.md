@@ -21,14 +21,14 @@ By Brandon Woo and Frank Zhu
   ![](images/rsync_command.png)
   >Running this command checks to see if the backup server is accessible using rsync. If the command was succesful, the output should look like this
 - Run the command `vim backup-script` in your home directory
-- Write shebang at the top then paste in rsync command that you ran it should look like this
+- Write shebang at the top then paste in rsync command that you previously ran. It should look like this:
 ![](images/trsync.png)
-- Save and exit out of file. Run `chmod u+x backup-script`
-- Delete the newly copied directory from your backup server so that you can test to see if you're script works
-- Run your backup script with `./backup-script` <br>
+- Save and exit out of file. Then, run `chmod u+x backup-script`.
+- Delete the newly copied directory from your backup server. This is so you can test to see if your script works
+- Run your backup script with `./backup-script`. If the script was successful, you should see the test backup directory in your backup server.
 ![](images/rsyscrt.png)
 ### Making the backup-script
-- Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
+- Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`. It will contain information
 ![](images/confsspng.png)
 >This configuration file will contain the variables required for the backup script. Each variable must be set to contain the information for your backup server and folders to backup. For example, the SSH variable must contain the path to your private key on your Linux machine.
 - The new script should look like this.
