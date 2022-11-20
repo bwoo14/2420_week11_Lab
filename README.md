@@ -39,7 +39,8 @@ By Brandon Woo and Frank Zhu
 - Run the command `vim backup-script.service`
 - Edit the file so it has the following content:
 ![](images/servicefile.png)
-  - The Description 
+  - The Description should contain a short description of what the script will do
+  - The
 
 ### Writing the Timer File
 - Run the command `vim backup-script.timer`
