@@ -13,6 +13,8 @@ By Brandon Woo and Frank Zhu
 
 ### Cloning the Repository
 1. Using a Linux Machine, clone this repository using `git clone https://github.com/bwoo14/2420_week11_Lab.git`
+### Uploading to your server
+1. Run command `sftp
 
 
 ## Tutorial to Create the Backup Script
