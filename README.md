@@ -2,8 +2,8 @@
 By Brandon Woo and Frank Zhu
 
 ## Prerequisites
-- root privleges
-- 2 Ubuntu Servers
+- 2 Ubuntu Servers made in DigitalOcean
+  - Root privilges on both servers
 
 ## Testing if backup server is accessible with `rsync`
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
