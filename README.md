@@ -3,17 +3,6 @@ By Brandon Woo and Frank Zhu
 <br>
 <br>Two Linux services are included in this repository. The first being a backup service. The backup service uses the `rsync` command and uses ssh to backup files to the backup server. The service is configured to run every Friday at 1:00am (based on system timezone). The second service is one that tells the user the weather upon logging in to Linux Server. The service gets the weather everyday at 5:00am (based on system timezone).
 
-- [2420_week11_Lab: Backup Service and Weather Service](#2420-week11-lab--backup-service-and-weather-service)
-  * [Prerequisites](#prerequisites)
-  * [Tutorial to Create the Backup Script](#tutorial-to-create-the-backup-script)
-    + [Testing if backup server is accessible with `rsync`](#testing-if-backup-server-is-accessible-with--rsync-)
-    + [Making the backup-script](#making-the-backup-script)
-    + [Writing the Service File](#writing-the-service-file)
-    + [Writing the Timer File](#writing-the-timer-file)
-    + [Moving the scripts and unit files to their correct directory](#moving-the-scripts-and-unit-files-to-their-correct-directory)
-    + [Enabling the](#enabling-the)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 ## Prerequisites
@@ -22,7 +11,7 @@ By Brandon Woo and Frank Zhu
 
 ## Tutorial to Create the Backup Script
 
-### Testing if backup server is accessible with `rsync`
+### Testing if your backup server is accessible with `rsync`
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
   <br>\<path to ssh key\> = the location of the ssh key to your backup server
   <br>\<file(s)\> = the name of the file(s) you want to backup, for testing purposes, use a single directory with a single file in it
@@ -41,7 +30,7 @@ By Brandon Woo and Frank Zhu
 ### Making the backup-script
 - Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`
 ![](images/confsspng.png)
-- The new script should look like this
+- The new script should look like this.
 ![](images/newscr.png)
 
 
@@ -71,7 +60,7 @@ By Brandon Woo and Frank Zhu
 - Run the command `sudo cp backup-script /opt/backup-script` to move the script file into the newly created directory
 - Run the command `sudo cp backup-script.* /etc/systemd/system/` to move both service files to the `/etc/systemd/system/` directory
 
-### Enabling the 
+### Enabling the Backup Service
 - Reload the daemon by using the command `sudo systemctl daemon-reload`
 - Start the service using the command `sudo systemctl start backup-script.service`
 - enable both the service file and the timer file using `sudo systemctl enable --now backup-script` and `sudo systemctl enable --now backup-script.timer`
