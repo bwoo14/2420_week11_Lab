@@ -3,6 +3,19 @@ By Brandon Woo and Frank Zhu
 <br>
 <br>Two Linux services are included in this repository. The first being a backup service. The backup service uses the `rsync` command and uses ssh to backup files to the backup server. The service is configured to run every Friday at 1:00am (based on system timezone). The second service is one that tells the user the weather upon logging in to Linux Server. The service gets the weather everyday at 5:00am (based on system timezone).
 
+- [2420_week11_Lab: Backup Service and Weather Service](#2420-week11-lab--backup-service-and-weather-service)
+  * [Prerequisites](#prerequisites)
+  * [Tutorial to Create the Backup Script](#tutorial-to-create-the-backup-script)
+    + [Testing if backup server is accessible with `rsync`](#testing-if-backup-server-is-accessible-with--rsync-)
+    + [Making the backup-script](#making-the-backup-script)
+    + [Writing the Service File](#writing-the-service-file)
+    + [Writing the Timer File](#writing-the-timer-file)
+    + [Moving the scripts and unit files to their correct directory](#moving-the-scripts-and-unit-files-to-their-correct-directory)
+    + [Enabling the](#enabling-the)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Prerequisites
 - 2 Ubuntu Servers made in DigitalOcean
   - Root privilges on both servers
