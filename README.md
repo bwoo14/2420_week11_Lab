@@ -19,7 +19,7 @@ By Brandon Woo and Frank Zhu
   <br>`<ip-address>` = the ip-address of the backup server
   <br>`<destination>` = the location on the backup server you want to save the backup file to
   ![](images/rsync_command.png)
-  - Running this command checks to see if the backup server is accessible using rsync. If the command was succesful, the output should look like this
+  >Running this command checks to see if the backup server is accessible using rsync. If the command was succesful, the output should look like this
 - Run the command `vim backup-script` in your home directory
 - Write shebang at the top then paste in rsync command that you ran it should look like this
 ![](images/trsync.png)
