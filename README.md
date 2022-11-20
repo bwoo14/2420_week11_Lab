@@ -13,11 +13,11 @@ By Brandon Woo and Frank Zhu
 
 ### Testing if your backup server is accessible with `rsync`
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
-  <br>\<path to ssh key\> = the location of the ssh key to your backup server
-  <br>\<file(s)\> = the name of the file(s) you want to backup, for testing purposes, use a single directory with a single file in it
-  <br>\<user\> = the user on the backup server you wish to ssh into
-  <br>\<ip-address\> = the ip-address of the backup server
-  <br>\<destination\> = the location on the backup server you want to save the backup file to
+  <br>`\<path to ssh key\>` = the location of the ssh key to your backup server
+  <br>`\<file(s)\>` = the name of the file(s) you want to backup, for testing purposes, use a single directory with a single file in it
+  <br>`\<user\>` = the user on the backup server you wish to ssh into
+  <br>`\<ip-address\>` = the ip-address of the backup server
+  <br>`\<destination\>` = the location on the backup server you want to save the backup file to
   ![](images/rsync_command.png)
 - Running this command checks to see if the backup server is accessible using rsync. 
 - Run the command `vim backup-script` in your home directory
