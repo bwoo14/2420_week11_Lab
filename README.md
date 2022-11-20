@@ -43,9 +43,9 @@ By Brandon Woo and Frank Zhu
 - Run the command `vim backup-script.timer`
 - Edit the file so it has the following content:
 ![](images/timerfile.png)
-- `RandomizedDelaySec=5m` the `5m` value can be changed to what the user requires. 
-- This value will allow the script to randomize the start time of each server that requires the backup from 0 seconds to the value required by the user.
-- `RandomizedDelaySec` will change the value given into seconds.
+  - `RandomizedDelaySec=5m` the `5m` value can be changed to what the user requires. 
+  - This value will allow the script to randomize the start time of each server that requires the backup from 0 seconds to the value required by the user.
+  - `RandomizedDelaySec` will change the value given into seconds.
 - Save and exit the file
 
 - Use the command `sudo timedatectl set-timezone America/Vancouver`
