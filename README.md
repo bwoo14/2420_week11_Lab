@@ -4,13 +4,12 @@ By Brandon Woo and Frank Zhu
 <br>Two Linux services are included in this repository. The first being a backup service. The backup service uses the `rsync` command and uses ssh to backup files to the backup server. The service is configured to run every Friday at 1:00am (based on system timezone). The second service is one that tells the user the weather upon logging in to Linux Server. The service gets the weather everyday at 5:00am (based on system timezone).
 
 
-
 ## Prerequisites
 - 2 Ubuntu Servers made in DigitalOcean
   - Root privilges on both servers
 
 ## Tutorial to Create the Backup Script
-
+- This tutorial assumes that the you have successfully created two DigitalOcean servers using the following video: https://vimeo.com/758870226/f75da348fc?embedded=true&source=vimeo_logo&owner=17609105
 ### Testing if your backup server is accessible with `rsync`
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
   <br>\<path to ssh key\> = the location of the ssh key to your backup server
