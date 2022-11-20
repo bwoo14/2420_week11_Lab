@@ -18,9 +18,9 @@ By Brandon Woo and Frank Zhu
   <br>\<ip-address\> = the ip-address of the backup server
   <br>\<destination\> = the location on the backup server you want to save the backup file to
   ![](images/rsync_command.png)
-- Running this command checks to see if the backup server is accessible using rsync. 
+  - Running this command checks to see if the backup server is accessible using rsync. 
 - Run the command `vim backup-script` in your home directory
-- Write shebang at the top then paste in rsync command that you ran it should look like this
+- Write the shebang (`#!/bin/bash`) at the top of the file then paste in rsync command that you previously ran. It should look like this except containing the information for your server and ssh key.
 ![](images/trsync.png)
 - Save and exit out of file. Run `chmod u+x backup-script`
 - Delete the newly copied directory from your backup server so that you can test to see if you're script works
