@@ -9,6 +9,11 @@ By Brandon Woo and Frank Zhu
 - 2 Ubuntu Servers made in DigitalOcean
   - Root privilges on both servers
 
+## Installation
+
+### Cloning the Repository
+1. Using a Linux Machine, clone this repository using `git clone`
+
 ## Tutorial to Create the Backup Script
 
 ### Testing if your backup server is accessible with `rsync`
