@@ -9,6 +9,7 @@ By Brandon Woo and Frank Zhu
   - Root privilges on both servers
 
 ## Tutorial to Create the Backup Script
+- Create a directory in your homedirectory containing a file. For example you can run `mkdir testbackup1 && touch file1`. This will be the file we will be using to test a backup script and the backup service
 - This tutorial assumes that the you have successfully created two DigitalOcean servers using the following video: https://vimeo.com/758870226/f75da348fc?embedded=true&source=vimeo_logo&owner=17609105
 ### Testing if your backup server is accessible with `rsync`
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
