@@ -9,9 +9,9 @@ By Brandon Woo and Frank Zhu
   - Root privilges on both servers
 
 ## Tutorial to Create the Backup Script
-- Create a directory in your homedirectory containing a file. For example you can run `mkdir testbackup1 && touch file1`. This will be the file we will be using to test a backup script and the backup service
 - This tutorial assumes that the you have successfully created two DigitalOcean servers using the following video: https://vimeo.com/758870226/f75da348fc?embedded=true&source=vimeo_logo&owner=17609105
 ### Testing if your backup server is accessible with `rsync`
+- Create a directory in your homedirectory containing a file. For example you can run `mkdir testbackup1 && touch file1`. This will be the file we will be using to test a backup script and the backup service
 - Run the command `rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>`
   <br>\<path to ssh key\> = the location of the ssh key to your backup server
   <br>\<file(s)\> = the name of the file(s) you want to backup, for testing purposes, use a single directory with a single file in it
@@ -19,7 +19,7 @@ By Brandon Woo and Frank Zhu
   <br>\<ip-address\> = the ip-address of the backup server
   <br>\<destination\> = the location on the backup server you want to save the backup file to
   ![](images/rsync_command.png)
-  - Running this command checks to see if the backup server is accessible using rsync. 
+  - Running this command checks to see if the backup server is accessible using rsync. If the command was successful, the backup server should contain the test backup directory you created in the specified file path.
 - Run the command `vim backup-script` in your home directory
 - Write the shebang (`#!/bin/bash`) at the top of the file then paste in rsync command that you previously ran. It should look like this except containing the information for your server and ssh key.
 ![](images/trsync.png)
