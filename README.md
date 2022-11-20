@@ -30,7 +30,7 @@ By Brandon Woo and Frank Zhu
 ### Making the backup-script
 - Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`. It will contain information
 ![](images/confsspng.png)
->This configuration file will contain the variables required for the backup script. Each variable must be set to contain the information for your backup server and folders to backup. For example, the SSH variable must contain the path to your private key on your Linux machine.
+>This configuration file will contain the variables required for the backup script. Each variable must be set to contain the information for your backup server and folders to backup. For example, the SSH variable must contain the path to your private key on your Linux machine. The `TARGET` variable can contain multiple paths to directories, but will have to be separated by spaces inside of quotes when assigning to the variable
 - The new script should look like this.
 ![](images/newscr.png)
 
