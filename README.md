@@ -14,7 +14,13 @@ By Brandon Woo and Frank Zhu
 ### Cloning the Repository
 1. Using a Linux Machine, clone this repository using `git clone https://github.com/bwoo14/2420_week11_Lab.git`
 ### Uploading to your server
-1. Run command `sftp
+1. Run command `sftp -i "<path to ssh key>" <user>@<ip address>`
+Where: 
+ - `<path to ssh key>` is the path to the ssh key that logs into your DigitalOcean server`
+ - `<user>` is the user on your DigitalOcean server
+ - `<ip address>` is the IP address of your DigitalOcean server
+ 
+2. 
 
 
 ## Tutorial to Create the Backup Script
