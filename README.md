@@ -8,6 +8,8 @@ By Brandon Woo and Frank Zhu
 ## Prerequisites
 - 2 Ubuntu Servers made in DigitalOcean
   - Root privilges on both servers
+- An ssh key pair to login from your host machine to the first server
+- Another ssh key pair to login from your digital ocean server to your digital ocean backup server.
 
 ## Installation
 
@@ -16,7 +18,7 @@ By Brandon Woo and Frank Zhu
 ```
 git clone https://github.com/bwoo14/2420_week11_Lab.git
 ```
-1. Inside of this repository, run command 
+2. Inside of this repository, run command 
 ```
 sftp -i "<path to ssh key>" <user>@<ip address>
 ```
@@ -24,17 +26,62 @@ sftp -i "<path to ssh key>" <user>@<ip address>
  - `<path to ssh key>` is the path to the ssh key that logs into your DigitalOcean server`
  - `<user>` is the user on your DigitalOcean server
  - `<ip address>` is the IP address of your DigitalOcean server
-2. using the `put` command transfer **each** file in this repository to your server:
+3. using the `put` command transfer **each** file in this repository to your server:
 ```
 put backup-script
 ```
 >Do this for **each** file in this repository except for the images directory and the README.md
-3. Create a new configuration file in the `/etc/` directory named `backup-script.conf`
+4. Create a new configuration file in the `/etc/` directory named `backup-script.conf`
 ```
 sudo vim /etc/backup_script.conf
 ```
-4. The configuration file **must** contain the following variables:
+5. The configuration file **must** contain the following variables:
+- `TARGET` = the directories you wish to backup (you can put multiple directories, but they must be separated by spaces and the entire statment surrounded by double quotes. For example `TARGET`="dir1 dir2")
+- `SERVER` = the name of the user and the IP address of the server
+- `SSH` = the command to ssh into your server with the path to the ssh key that ssh's into your server
+- `DESTINATION` = the destination on your backup server where the backup will be stored 
 ![](images/confsspng.png)
+> Make sure to change the variable information so that it matches your paths, IPs, etc
+6. Save and exit the .conf file
+7. Back in your home directory. Test the backup script using:
+```
+./backup-script
+```
+>If the command was successful, the output should look like this:
+![](images/rsyscrt.png)
+> The backed up file should also be in your backup server
+8. copy the `backup-script.service` file to the `/etc/systemd/system` directory
+```
+sudo cp backup-script.service /etc/systemd/system
+```
+9. copy the `backup-script.timer` file to the `/etc/systemd/system`
+```
+sudo cp backup-script.timer /etc/systemd/system
+```
+10. Create a new directory in the `/opt` directory called `backup-script`
+11. Copy the `backup-script` file to the newly created `/opt/backup-script`
+```
+sudo cp backup-script /opt/backup-script
+```
+12. Reload the daemon with:
+```
+sudo systemctl daemon-reload
+```
+13. Start the service file with:
+```
+sudo systemctl start backup-script.service
+```
+14. Enable the timer and the service script using
+```
+sudo systemctl enable --now backup-script.timer
+sudo systemctl enable --now backup-script.timer
+```
+15. Check to see if the timer is working with
+```
+sudo systemctl list-timer
+```
+The list should contain the backup.timer we created
+![](images/timerlist.png)
 
 ## Tutorial to Create the Backup Script
 
@@ -144,6 +191,4 @@ sudo systemctl list-timers
 ```
 - As you can see from the screenshot the service is now scheduled to run (bottom line)
 ![](images/timerlist.png)
-
-![](images/test_rsync.png)
 
