@@ -11,7 +11,7 @@ By Brandon Woo and Frank Zhu
 - An ssh key pair to login from your host machine to the first server
 - Another ssh key pair to login from your digital ocean server to your digital ocean backup server.
 
-## Installation
+## 1. Installation
 
 ### Cloning the Repository
 1. Using a Linux Machine, clone this repository using 
@@ -83,9 +83,9 @@ sudo systemctl list-timers
 The list should contain the backup.timer we created
 ![](images/timerlist.png)
 
-## Tutorial to Create the Backup Script
+## 2. Tutorial to Create the Backup Script
 
-### Testing if your backup server is accessible with `rsync`
+### 2.1 Testing if your backup server is accessible with `rsync`
 - Run the command 
 ```
 rsync -aPv -e "ssh -i <path to ssh key>" <file(s)> <user>@<ip-address>:<destination>
@@ -111,7 +111,7 @@ chmod u+x backup-script
 ``` 
 If the script was successful, you should see the test backup directory in your backup server.
 ![](images/rsyscrt.png)
-### Making the backup-script
+### 2.2 Making the backup-script
 - Make a configuration file in the `/etc` directory by running `sudo touch backup_script.conf`. It will contain information
 ![](images/confsspng.png)
 >This configuration file will contain the variables required for the backup script. Each variable must be set to contain the information for your backup server and folders to backup. For example, the SSH variable must contain the path to your private key on your Linux machine. The `TARGET` variable can contain multiple paths to directories, but will have to be separated by spaces inside of quotes when assigning to the variable
@@ -120,7 +120,7 @@ If the script was successful, you should see the test backup directory in your b
 ![](images/newscr.png)
 
 
-### Writing the Service File
+### 2.3 Writing the Service File
 - Run the command 
 ```
 vim backup-script.service
@@ -130,7 +130,7 @@ vim backup-script.service
   - The Description should contain a short description of what the script will do
   - The `ExecStart` indicates the script will run on startup
 
-### Writing the Timer File
+### 2.4 Writing the Timer File
 - Run the command 
 ```
 vim backup-script.timer
@@ -145,7 +145,7 @@ sudo timedatectl set-timezone America/Vancouver
 ```
 - Can change `America/Vancouver` to the desired timezone
 
-### Moving the scripts and unit files to their correct directory
+### 2.5 Moving the scripts and unit files to their correct directory
 - Before starting, make a new directory in the /opt directory to hold the script 
 - The new directory must match the directory specified in the `ExecStart` directive
 - Run the command 
@@ -168,7 +168,7 @@ sudo cp backup-script.* /etc/systemd/system/
 ```
 to move both service files to the `/etc/systemd/system/` directory
 
-### Enabling the Backup Service
+### 2.6 Enabling the Backup Service
 - Reload the daemon by using the command 
 ```
 sudo systemctl daemon-reload
