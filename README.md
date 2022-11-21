@@ -3,7 +3,17 @@ By Brandon Woo and Frank Zhu
 <br>
 <br>Two Linux services are included in this repository. The first being a backup service. The backup service uses the `rsync` command and uses ssh to backup files to the backup server. The service is configured to run every Friday at 1:00am (based on system timezone). The second service is one that tells the user the weather upon logging in to Linux Server. The service gets the weather everyday at 5:00am (based on system timezone).
 
-
+- [2420_week11_Lab: Backup Service and Weather Service](#2420-week11-lab--backup-service-and-weather-service)
+  * [Prerequisites](#prerequisites)
+  * [1. Installation](#1-installation)
+    + [Cloning the Repository](#cloning-the-repository)
+  * [2. Tutorial to Create the Backup Script](#2-tutorial-to-create-the-backup-script)
+    + [2.1 Testing if your backup server is accessible with `rsync`](#21-testing-if-your-backup-server-is-accessible-with--rsync-)
+    + [2.2 Making the backup-script](#22-making-the-backup-script)
+    + [2.3 Writing the Service File](#23-writing-the-service-file)
+    + [2.4 Writing the Timer File](#24-writing-the-timer-file)
+    + [2.5 Moving the scripts and unit files to their correct directory](#25-moving-the-scripts-and-unit-files-to-their-correct-directory)
+    + [2.6 Enabling the Backup Service](#26-enabling-the-backup-service)
 
 ## Prerequisites
 - 2 Ubuntu Servers made in DigitalOcean
