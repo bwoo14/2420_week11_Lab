@@ -35,11 +35,7 @@ put backup-script
 ```
 sudo vim /etc/backup_script.conf
 ```
-5. The configuration file **must** contain the following variables:
-- `TARGET` = the directories you wish to backup (you can put multiple directories, but they must be separated by spaces and the entire statment surrounded by double quotes. For example `TARGET`="dir1 dir2")
-- `SERVER` = the name of the user and the IP address of the server
-- `SSH` = the command to ssh into your server with the path to the ssh key that ssh's into your server
-- `DESTINATION` = the destination on your backup server where the backup will be stored 
+4. The configuration file **must** contain the following variables:
 ![](images/confsspng.png)
 > Make sure to change the variable information so that it matches your paths, IPs, etc
 6. Save and exit the .conf file
