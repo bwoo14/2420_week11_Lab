@@ -78,7 +78,7 @@ sudo systemctl enable --now backup-script.timer
 ```
 15. Check to see if the timer is working with
 ```
-sudo systemctl list-timer
+sudo systemctl list-timers
 ```
 The list should contain the backup.timer we created
 ![](images/timerlist.png)
