@@ -24,7 +24,7 @@ sftp -i "<path to ssh key>" <user>@<ip address>
  - `<path to ssh key>` is the path to the ssh key that logs into your DigitalOcean server`
  - `<user>` is the user on your DigitalOcean server
  - `<ip address>` is the IP address of your DigitalOcean server
-2. 
+2. Hi
 
 
 ## Tutorial to Create the Backup Script
