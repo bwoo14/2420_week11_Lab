@@ -29,6 +29,12 @@ sftp -i "<path to ssh key>" <user>@<ip address>
 put backup-script
 ```
 >Do this for **each** file in this repository except for the images directory and the README.md
+3. Create a new configuration file in the `/etc/` directory named `backup-script.conf`
+```
+sudo vim /etc/backup_script.conf
+```
+4. The configuration file **must** contain the following variables:
+![](confsspng.png)
 
 ## Tutorial to Create the Backup Script
 
