@@ -3,6 +3,8 @@ By Brandon Woo and Frank Zhu
 <br>
 <br>Two Linux services are included in this repository. The first being a backup service. The backup service uses the `rsync` command and uses ssh to backup files to the backup server. The service is configured to run every Friday at 1:00am (based on system timezone). The second service is one that tells the user the weather upon logging in to Linux Server. The service gets the weather everyday at 5:00am (based on system timezone).
 
+## Table of Contents
+
 - [2420_week11_Lab: Backup Service and Weather Service](#2420-week11-lab--backup-service-and-weather-service)
   * [Prerequisites](#prerequisites)
   * [1. Installation](#1-installation)
