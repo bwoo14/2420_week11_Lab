@@ -34,6 +34,7 @@ put backup-script
 sudo vim /etc/backup_script.conf
 ```
 4. The configuration file **must** contain the following variables:
+
 ![](images/confsspng.png)
 
 ## Tutorial to Create the Backup Script
