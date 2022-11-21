@@ -24,11 +24,11 @@ sftp -i "<path to ssh key>" <user>@<ip address>
  - `<path to ssh key>` is the path to the ssh key that logs into your DigitalOcean server`
  - `<user>` is the user on your DigitalOcean server
  - `<ip address>` is the IP address of your DigitalOcean server
-2. using the `put` command transfer each file in this repository to your server:
+2. using the `put` command transfer **each** file in this repository to your server:
 ```
 put backup-script
 ```
->Do this for each file in this repository except for the images directory and the README.md
+>Do this for **each** file in this repository except for the images directory and the README.md
 
 ## Tutorial to Create the Backup Script
 
